@@ -5,7 +5,7 @@ description: Introduction to the Database Administration guides
 
 ## Map Editor
 
-```mermaid
+<!-- ```mermaid -->
 sequenceDiagram
 participant User
 participant SvelteApp
@@ -48,4 +48,4 @@ participant Database
     Note right of PostGIS: Executes SQL queries to<br>update each polygon geometry
     PostGIS-->>MapSvelte: All updates successful
     MapSvelte->>User: Displays success message
-```
+<!-- ``` -->

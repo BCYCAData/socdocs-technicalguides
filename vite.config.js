@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import mermaid from 'remark-mermaidjs';
 import { sveltepress } from '@sveltepress/vite';
 import { defaultTheme } from '@sveltepress/theme-default';
 import navbar from './config/navbar';
@@ -10,6 +11,9 @@ const config = defineConfig({
 			theme: defaultTheme({
 				navbar,
 				sidebar,
+				editLink:
+					'https://github.com/BCYCAData/socdocs-technicalguides/edit/main/src/routes/:route',
+				github: 'https://github.com/BCYCAData/socdocs-technicalguides',
 				logo: '/SOCLogo_quarter.png',
 				preBuildIconifyIcons: {
 					carbon: ['user'],
@@ -30,7 +34,15 @@ const config = defineConfig({
 			siteConfig: {
 				title: 'SOC Documentation',
 				description: "Documentation for the 'Strengthen Our Community' website"
-			}
+			},
+			remarkPlugins: [
+				[
+					mermaid,
+					{
+						// ...mermaid options
+					}
+				]
+			]
 		})
 	]
 });

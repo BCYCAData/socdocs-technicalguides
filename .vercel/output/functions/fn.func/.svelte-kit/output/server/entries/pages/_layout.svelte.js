@@ -335,7 +335,7 @@ const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     (isHome ? "is-home" : "") + " " + (!isHome && !hasError ? "move" : "")
   ].join(" ").trim()}">${validate_component(Search, "Search").$$render($$result, Object.assign({}, themeOptions.docsearch), {}, {})}</div>` : ``} <nav class="nav-links svelte-wxxf5d" aria-label="Menu"><div class="navbar-pc svelte-wxxf5d">${$innerWidth >= 950 ? `${each(themeOptions.navbar, (navItem) => {
     return `${validate_component(NavItem, "NavItem").$$render($$result, Object.assign({}, navItem), {}, {})}`;
-  })}` : ``} ${themeOptions.github ? `${validate_component(NavItem, "NavItem").$$render(
+  })}` : ``} ${`${validate_component(NavItem, "NavItem").$$render(
     $$result,
     {
       to: themeOptions.github,
@@ -350,7 +350,7 @@ const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         return `${validate_component(Github, "Github").$$render($$result, {}, {}, {})}`;
       }
     }
-  )}` : ``} ${themeOptions.discord ? `${validate_component(NavItem, "NavItem").$$render(
+  )}`} ${themeOptions.discord ? `${validate_component(NavItem, "NavItem").$$render(
     $$result,
     {
       to: themeOptions.discord,

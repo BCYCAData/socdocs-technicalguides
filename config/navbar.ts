@@ -1,6 +1,6 @@
 export default [
 	{
-		title: 'User Guides',
+		title: 'For Developers',
 		items: [
 			{
 				title: 'Introduction',
@@ -17,7 +17,7 @@ export default [
 		]
 	},
 	{
-		title: 'Administrators Guides',
+		title: 'Site Development',
 		items: [
 			{
 				title: 'Introduction',
@@ -42,7 +42,28 @@ export default [
 		]
 	},
 	{
-		title: 'Technical Guides',
+		title: 'Database Development',
+		items: [
+			{
+				title: 'Introduction',
+				to: '/tech-guides/introduction/'
+			},
+			{
+				title: 'Site Development',
+				to: '/tech-guides/site-development/introduction/'
+			},
+			{
+				title: 'Database Development',
+				to: '/tech-guides/db-development/introduction/'
+			},
+			{
+				title: 'Documentation Development',
+				to: '/tech-guides/docs-development/introduction/'
+			}
+		]
+	},
+	{
+		title: 'Documentation Development',
 		items: [
 			{
 				title: 'Introduction',

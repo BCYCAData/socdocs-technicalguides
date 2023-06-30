@@ -2,58 +2,47 @@
 	"version": 3,
 	"routes": [
 		{
-			"src": "/admin-guides/db-admin/introduction",
-			"dest": "/admin-guides/db-admin/introduction/"
+			"src": "/development-db/introduction",
+			"dest": "/development-db/introduction/"
 		},
 		{
-			"src": "/admin-guides/db-admin/introduction/",
+			"src": "/development-db/introduction/",
 			"status": 308,
 			"headers": {
-				"Location": "/admin-guides/db-admin/introduction"
+				"Location": "/development-db/introduction"
 			}
 		},
 		{
-			"src": "/admin-guides/dev-admin/introduction",
-			"dest": "/admin-guides/dev-admin/introduction/"
+			"src": "/development-docs/introduction",
+			"dest": "/development-docs/introduction/"
 		},
 		{
-			"src": "/admin-guides/dev-admin/introduction/",
+			"src": "/development-docs/introduction/",
 			"status": 308,
 			"headers": {
-				"Location": "/admin-guides/dev-admin/introduction"
+				"Location": "/development-docs/introduction"
 			}
 		},
 		{
-			"src": "/admin-guides/docs-admin/introduction",
-			"dest": "/admin-guides/docs-admin/introduction/"
+			"src": "/development-site/introduction",
+			"dest": "/development-site/introduction/"
 		},
 		{
-			"src": "/admin-guides/docs-admin/introduction/",
+			"src": "/development-site/introduction/",
 			"status": 308,
 			"headers": {
-				"Location": "/admin-guides/docs-admin/introduction"
+				"Location": "/development-site/introduction"
 			}
 		},
 		{
-			"src": "/admin-guides/introduction",
-			"dest": "/admin-guides/introduction/"
+			"src": "/development-site/mapping/property-map",
+			"dest": "/development-site/mapping/property-map/"
 		},
 		{
-			"src": "/admin-guides/introduction/",
+			"src": "/development-site/mapping/property-map/",
 			"status": 308,
 			"headers": {
-				"Location": "/admin-guides/introduction"
-			}
-		},
-		{
-			"src": "/admin-guides/site-admin/introduction",
-			"dest": "/admin-guides/site-admin/introduction/"
-		},
-		{
-			"src": "/admin-guides/site-admin/introduction/",
-			"status": 308,
-			"headers": {
-				"Location": "/admin-guides/site-admin/introduction"
+				"Location": "/development-site/mapping/property-map"
 			}
 		},
 		{
@@ -65,94 +54,6 @@
 			"status": 308,
 			"headers": {
 				"Location": "/faqs/faq"
-			}
-		},
-		{
-			"src": "/tech-guides/db-development/introduction",
-			"dest": "/tech-guides/db-development/introduction/"
-		},
-		{
-			"src": "/tech-guides/db-development/introduction/",
-			"status": 308,
-			"headers": {
-				"Location": "/tech-guides/db-development/introduction"
-			}
-		},
-		{
-			"src": "/tech-guides/docs-development/introduction",
-			"dest": "/tech-guides/docs-development/introduction/"
-		},
-		{
-			"src": "/tech-guides/docs-development/introduction/",
-			"status": 308,
-			"headers": {
-				"Location": "/tech-guides/docs-development/introduction"
-			}
-		},
-		{
-			"src": "/tech-guides/introduction",
-			"dest": "/tech-guides/introduction/"
-		},
-		{
-			"src": "/tech-guides/introduction/",
-			"status": 308,
-			"headers": {
-				"Location": "/tech-guides/introduction"
-			}
-		},
-		{
-			"src": "/tech-guides/site-development/introduction",
-			"dest": "/tech-guides/site-development/introduction/"
-		},
-		{
-			"src": "/tech-guides/site-development/introduction/",
-			"status": 308,
-			"headers": {
-				"Location": "/tech-guides/site-development/introduction"
-			}
-		},
-		{
-			"src": "/tech-guides/site-development/mapping/property-map",
-			"dest": "/tech-guides/site-development/mapping/property-map/"
-		},
-		{
-			"src": "/tech-guides/site-development/mapping/property-map/",
-			"status": 308,
-			"headers": {
-				"Location": "/tech-guides/site-development/mapping/property-map"
-			}
-		},
-		{
-			"src": "/user-guides/introduction",
-			"dest": "/user-guides/introduction/"
-		},
-		{
-			"src": "/user-guides/introduction/",
-			"status": 308,
-			"headers": {
-				"Location": "/user-guides/introduction"
-			}
-		},
-		{
-			"src": "/user-guides/recording-your-data",
-			"dest": "/user-guides/recording-your-data/"
-		},
-		{
-			"src": "/user-guides/recording-your-data/",
-			"status": 308,
-			"headers": {
-				"Location": "/user-guides/recording-your-data"
-			}
-		},
-		{
-			"src": "/user-guides/using-your-data",
-			"dest": "/user-guides/using-your-data/"
-		},
-		{
-			"src": "/user-guides/using-your-data/",
-			"status": 308,
-			"headers": {
-				"Location": "/user-guides/using-your-data"
 			}
 		},
 		{
@@ -173,47 +74,20 @@
 		"index.html": {
 			"path": ""
 		},
-		"admin-guides/db-admin/introduction.html": {
-			"path": "admin-guides/db-admin/introduction"
+		"development-db/introduction.html": {
+			"path": "development-db/introduction"
 		},
-		"admin-guides/dev-admin/introduction.html": {
-			"path": "admin-guides/dev-admin/introduction"
+		"development-docs/introduction.html": {
+			"path": "development-docs/introduction"
 		},
-		"admin-guides/docs-admin/introduction.html": {
-			"path": "admin-guides/docs-admin/introduction"
+		"development-site/introduction.html": {
+			"path": "development-site/introduction"
 		},
-		"admin-guides/introduction.html": {
-			"path": "admin-guides/introduction"
-		},
-		"admin-guides/site-admin/introduction.html": {
-			"path": "admin-guides/site-admin/introduction"
+		"development-site/mapping/property-map.html": {
+			"path": "development-site/mapping/property-map"
 		},
 		"faqs/faq.html": {
 			"path": "faqs/faq"
-		},
-		"tech-guides/db-development/introduction.html": {
-			"path": "tech-guides/db-development/introduction"
-		},
-		"tech-guides/docs-development/introduction.html": {
-			"path": "tech-guides/docs-development/introduction"
-		},
-		"tech-guides/introduction.html": {
-			"path": "tech-guides/introduction"
-		},
-		"tech-guides/site-development/introduction.html": {
-			"path": "tech-guides/site-development/introduction"
-		},
-		"tech-guides/site-development/mapping/property-map.html": {
-			"path": "tech-guides/site-development/mapping/property-map"
-		},
-		"user-guides/introduction.html": {
-			"path": "user-guides/introduction"
-		},
-		"user-guides/recording-your-data.html": {
-			"path": "user-guides/recording-your-data"
-		},
-		"user-guides/using-your-data.html": {
-			"path": "user-guides/using-your-data"
 		}
 	}
 }

@@ -8,25 +8,25 @@ actions:
     to: https://strengthen-our-community.vercel.app/
     external: true
 features:
-  - title: User Guide
-    description: To help you can start writing with minimal configuration
-    icon:
-      type: iconify
-      collection: carbon
-      name: user
-    link: '/user-guides/introduction/'
-  - title: Administrators Guide
-    description: Preserve the full power of Sveltekit. So that you can do more than SSG
-    icon:
-      type: iconify
-      collection: tabler
-      name: stack-2
-    link: '/admin-guides/introduction/'
-  - title: Technical Guide
-    description: Feel free to use svelte in markdown. Explore infinite possibilities.
+  - title: For Site Developers
+    description: For Site Developers.
     icon:
       type: iconify
       collection: grommet-icons
       name: system
-    link: '/tech-guides/introduction/'
+    link: '/development-site/introduction/'
+  - title: For Database Developers
+    description: For Database Developers.
+    icon:
+      type: iconify
+      collection: grommet-icons
+      name: system
+    link: '/development-site/introduction/'
+  - title: For Documentation Developers
+    description: For Documentation Developers.
+    icon:
+      type: iconify
+      collection: grommet-icons
+      name: system
+    link: '/development-docs/introduction/'
 ---

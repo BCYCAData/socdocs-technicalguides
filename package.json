@@ -1,5 +1,5 @@
 {
-	"name": "sveltepress-test",
+	"name": "socdocs-technicalguides",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -12,24 +12,22 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/adapter-static": "^2.0.2",
+		"@sveltejs/adapter-vercel": "^3.0.1",
 		"@sveltejs/kit": "^1.20.4",
 		"@sveltepress/theme-default": "^1.15.1",
 		"@sveltepress/vite": "^0.25.0",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte": "^2.30.0",
+		"mermaid": "^10.2.3",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.10.1",
+		"remark-mermaidjs": "^5.0.1",
 		"svelte": "^4.0.0",
 		"svelte-check": "^3.4.3",
 		"typescript": "^5.0.0",
 		"vite": "^4.3.6"
 	},
 	"type": "module",
-	"license": "MIT",
-	"dependencies": {
-		"@sveltejs/adapter-vercel": "^3.0.1"
-	}
+	"license": "MIT"
 }

@@ -1,5 +1,6 @@
 import { c as create_ssr_component, o as onDestroy, a as add_attribute, b as compute_rest_props, e as escape, v as validate_component, d as each, f as spread, g as escape_attribute_value, h as escape_object, n as null_to_empty, i as subscribe, j as createEventDispatcher, k as add_styles, l as set_store_value } from "../../chunks/ssr.js";
-import { E as External, s as siteConfig, t as themeOptions, n as navCollapsed, a as tocCollapsed, b as afterNavigate, c as sidebarCollapsed, d as scrollDirection, i as innerWidth, r as resolvedSidebar, o as oldScrollY, e as scrollY, f as sidebar, g as anchors, h as beforeNavigate, j as resolveSidebar } from "../../chunks/Link.svelte_svelte_type_style_lang.js";
+import { E as External, s as siteConfig, t as themeOptions, n as navCollapsed, a as tocCollapsed, b as afterNavigate, c as sidebarCollapsed, d as scrollDirection, r as resolvedSidebar, o as oldScrollY, e as scrollY, f as sidebar, g as anchors, h as resolveSidebar, i as beforeNavigate } from "../../chunks/Link.svelte_svelte_type_style_lang.js";
+import { b as base } from "../../chunks/paths.js";
 import { p as page } from "../../chunks/stores.js";
 const void_element_names = /^(?:area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)$/;
 function is_void(name) {
@@ -112,11 +113,19 @@ const css$d = {
 };
 const Logo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$d);
-  return `${validate_component(NavItem, "NavItem").$$render($$result, { to: "/", title: siteConfig.title }, {}, {
-    default: () => {
-      return `${`<img class="logo svelte-1qc3gua" height="32"${add_attribute("src", themeOptions.logo, 0)}${add_attribute("alt", siteConfig.title, 0)}> <span class="title svelte-1qc3gua">${escape(siteConfig.title)}</span>`}`;
+  return `${validate_component(NavItem, "NavItem").$$render(
+    $$result,
+    {
+      to: base === "" ? "/" : base,
+      title: siteConfig.title
+    },
+    {},
+    {
+      default: () => {
+        return `${`<img class="logo svelte-1qc3gua" height="32"${add_attribute("src", themeOptions.logo, 0)}${add_attribute("alt", siteConfig.title, 0)}> <span class="title svelte-1qc3gua">${escape(siteConfig.title)}</span>`}`;
+      }
     }
-  })}`;
+  )}`;
 });
 const Github = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, []);
@@ -319,23 +328,20 @@ const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let hasError;
   let $page, $$unsubscribe_page;
   let $scrollDirection, $$unsubscribe_scrollDirection;
-  let $innerWidth, $$unsubscribe_innerWidth;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
   $$unsubscribe_scrollDirection = subscribe(scrollDirection, (value) => $scrollDirection = value);
-  $$unsubscribe_innerWidth = subscribe(innerWidth, (value) => $innerWidth = value);
   $$result.css.add(css$6);
   routeId = $page.route.id;
   isHome = routeId === "/";
   hasError = $page.error;
   $$unsubscribe_page();
   $$unsubscribe_scrollDirection();
-  $$unsubscribe_innerWidth();
   return `<header class="${["header svelte-wxxf5d", $scrollDirection === "down" ? "hidden-in-mobile" : ""].join(" ").trim()}"><div class="header-inner svelte-wxxf5d"><div class="left svelte-wxxf5d">${validate_component(NavbarMobile, "NavbarMobile").$$render($$result, {}, {}, {})} ${hasError || isHome ? `<div class="logo-container svelte-wxxf5d">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}</div>` : ``}</div> ${themeOptions.docsearch ? `<div class="${[
     "doc-search svelte-wxxf5d",
     (isHome ? "is-home" : "") + " " + (!isHome && !hasError ? "move" : "")
-  ].join(" ").trim()}">${validate_component(Search, "Search").$$render($$result, Object.assign({}, themeOptions.docsearch), {}, {})}</div>` : ``} <nav class="nav-links svelte-wxxf5d" aria-label="Menu"><div class="navbar-pc svelte-wxxf5d">${$innerWidth >= 950 ? `${each(themeOptions.navbar, (navItem) => {
+  ].join(" ").trim()}">${validate_component(Search, "Search").$$render($$result, Object.assign({}, themeOptions.docsearch), {}, {})}</div>` : ``} <nav class="nav-links svelte-wxxf5d" aria-label="Menu"><div class="navbar-pc svelte-wxxf5d"><div class="sm:display-contents display-none">${each(themeOptions.navbar, (navItem) => {
     return `${validate_component(NavItem, "NavItem").$$render($$result, Object.assign({}, navItem), {}, {})}`;
-  })}` : ``} ${`${validate_component(NavItem, "NavItem").$$render(
+  })}</div> ${`${validate_component(NavItem, "NavItem").$$render(
     $$result,
     {
       to: themeOptions.github,
@@ -373,11 +379,13 @@ const css$5 = {
 };
 const Link = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let isExternal;
+  let toWithBase;
   let { label = "" } = $$props;
   let { to = "" } = $$props;
   let { inline = true } = $$props;
   let { active = false } = $$props;
   let { highlight = true } = $$props;
+  let { withBase = true } = $$props;
   if ($$props.label === void 0 && $$bindings.label && label !== void 0)
     $$bindings.label(label);
   if ($$props.to === void 0 && $$bindings.to && to !== void 0)
@@ -388,13 +396,21 @@ const Link = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.active(active);
   if ($$props.highlight === void 0 && $$bindings.highlight && highlight !== void 0)
     $$bindings.highlight(highlight);
+  if ($$props.withBase === void 0 && $$bindings.withBase && withBase !== void 0)
+    $$bindings.withBase(withBase);
   $$result.css.add(css$5);
   isExternal = /^https?/.test(to);
+  toWithBase = isExternal ? to : `${base}${to}`;
   return `<a${spread(
     [
-      { href: escape_attribute_value(to) },
+      {
+        href: escape_attribute_value(withBase ? toWithBase : to)
+      },
       { class: "link" },
-      escape_object(isExternal ? { target: "_blank" } : {})
+      escape_object(isExternal ? { target: "_blank" } : {}),
+      {
+        "aria-label": escape_attribute_value(label)
+      }
     ],
     {
       classes: (!inline ? "no-inline" : "") + " " + (active ? "active" : "") + " " + (highlight ? "highlight" : "") + " svelte-1rl6eur"
@@ -425,7 +441,7 @@ const SidebarGroup = create_ssr_component(($$result, $$props, $$bindings, slots)
   $$result.css.add(css$4);
   routeId = $page.route.id;
   $$unsubscribe_page();
-  return `<div class="sidebar-group svelte-1oujmou"><div class="group-title svelte-1oujmou"><div>${escape(title)}</div> ${collapsible ? `<div class="collapse-control svelte-1oujmou" role="menu" tabindex="0"><div class="${["arrow svelte-1oujmou", ""].join(" ").trim()}">${validate_component(ArrowDown, "ArrowDown").$$render($$result, {}, {}, {})}</div></div>` : ``}</div> ${`<div class="links svelte-1oujmou">${each(items, ({ to, title: title2 }) => {
+  return `<div class="sidebar-group svelte-1oujmou"><div class="group-title svelte-1oujmou"><div>${escape(title)}</div> ${collapsible ? `<div class="collapse-control svelte-1oujmou" role="button" tabindex="0" aria-label="Collapsable button"><div class="${["arrow svelte-1oujmou", ""].join(" ").trim()}">${validate_component(ArrowDown, "ArrowDown").$$render($$result, {}, {}, {})}</div></div>` : ``}</div> ${`<div class="links svelte-1oujmou">${each(items, ({ to, title: title2 }) => {
     let active = routeId.endsWith("/") ? to === routeId : to === `${routeId}/`;
     return ` ${validate_component(Link, "Link").$$render(
       $$result,
@@ -517,43 +533,42 @@ const Error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const GlobalLayout_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "main.svelte-tkaw86{--at-apply:'pt-[76px] sm:pt-[73px]'}html{--at-apply:'scroll-smooth'}body{--at-apply:'bg-light-4 dark:bg-zinc-9 text-[#213547] dark:text-warm-gray-2 scroll-smooth';font-family:'Inter var experimental', 'Inter var', 'Inter', ui-sans-serif,\n      system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,\n      'Helvetica Neue', Helvetica, Arial, 'Noto Sans', sans-serif,\n      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',\n      'Noto Color Emoji'}a{--at-apply:'text-[#002211] dark:text-[#efefef] decoration-none'}p{--at-apply:leading-6}ul{padding-left:1.25rem;margin:16px 0;line-height:1.5em}li + li{margin-top:0.5rem}.dark{color-scheme:dark}code{--at-apply:'bg-[#e9e9e9] dark:bg-[#3a3a3a] dark:text-[#c9def1] text-[#476582] px-[6px] py-[3px] rounded break-all'}pre.shiki code{--at-apply:'bg-transparent dark:bg-transparent p-unset block'}.svp-code-block-wrapper{--at-apply:'bg-white dark:bg-[#011627] sm:rounded-lg text-[14px] mb-8 mx-[-5vw] sm:mx-none'}.svp-live-code--container{--at-apply:'mx-[-5vw] sm:mx-none'}.svp-live-code--container .svp-code-block-wrapper{--at-apply:'mx-none'}.svp-code-block{--at-apply:relative px-[18px] py-[12px]}.svp-code-block--title{--at-apply:'px-[18px] leading-10 font-700 b-b b-b-solid b-b-gray-2 dark:b-b-gray-8'}.svp-code-block--with-line-numbers{--at-apply:pl-10}.svp-code-block--line-numbers{--at-apply:'absolute left-0 top-0 bottom-0 py-inherit text-3 text-right text-gray-4 px-2 leading-[21px] b-r-solid b-r b-r-light-4 dark:b-r-gray-8';font-family:var(--svp-code-font)}.svp-code-block:hover .svp-code-block--lang{--at-apply:opacity-0}.c-expansion--body .svp-code-block{--at-apply:rounded-none}.c-expansion--body .svp-code-block-wrapper{--at-apply:mb-none}.svp-code-block--lang{--at-apply:'absolute top-2 right-3 z-100 text-cool-gray-3 dark:text-cool-gray-7 text-[12px] transition-300 transition-opacity'}.svp-code-block--command-line{--at-apply:absolute left-0 right-0 z-2 h-[1.5em]}.svp-code-block--focus{--at-apply:'bg-white dark:bg-black pointer-events-none bg-opacity-20 dark:bg-opacity-20 absolute left-0 right-0 z-4 transition-300 transition-opacity';backdrop-filter:blur(1.5px)}.svp-code-block--diff-bg-add{--at-apply:'bg-green-4 bg-opacity-20 dark:bg-green-8 dark:bg-opacity-30'}.svp-code-block--diff-bg-sub{--at-apply:'bg-rose-4 bg-opacity-20 dark:bg-red-8 dark:bg-opacity-30'}.svp-code-block--with-line-numbers .svp-code-block--diff-add,.svp-code-block--with-line-numbers .svp-code-block--diff-sub{--at-apply:pl-8}.svp-code-block--diff-add{--at-apply:text-green-4}.svp-code-block--diff-sub{--at-apply:text-rose-4}.svp-code-block--diff-add,.svp-code-block--diff-sub{--at-apply:absolute left-[4px] top-0 bottom-0 leading-[1.5em];font-family:var(--svp-code-font)}.svp-code-block--hl{--at-apply:'bg-black dark:bg-white bg-opacity-10 dark:bg-opacity-10'}.svp-code-block:hover .svp-code-block--focus{--at-apply:opacity-0}blockquote{--at-apply:'border-l-[4px] border-l-solid border-gray-4 m-none bg-gray-2 indent-[1em] text-gray-4 py-[4px] my-4 dark:border-l-gray-5 dark:bg-gray-8'}blockquote p{--at-apply:m-none}table{--at-apply:border-collapse w-full}table th{--at-apply:text-left p-2}table tbody tr{--at-apply:'border-t-1 border-t-solid border-gray-2 dark:border-gray-7'}table tbody tr td{--at-apply:p-2}.svp-anchor-item{--at-apply:relative bottom-[100px]}.svp-live-code--demo .svp-code-block-wrapper{--at-apply:'mb-0'}",
+  code: "main.svelte-1ftdggk{--at-apply:'pt-[76px] sm:pt-[73px]'}html{--at-apply:'scroll-smooth'}body{--at-apply:'bg-light-4 dark:bg-zinc-9 text-[#213547] dark:text-warm-gray-2 scroll-smooth';font-family:'Inter var experimental',\n      'Inter var',\n      'Inter',\n      ui-sans-serif,\n      system-ui,\n      -apple-system,\n      BlinkMacSystemFont,\n      'Segoe UI',\n      Roboto,\n      'Helvetica Neue',\n      Helvetica,\n      Arial,\n      'Noto Sans',\n      sans-serif,\n      'Apple Color Emoji',\n      'Segoe UI Emoji',\n      'Segoe UI Symbol',\n      'Noto Color Emoji'}a{--at-apply:'text-[#002211] dark:text-[#efefef] decoration-none'}sup a{--uno:'c-svp-primary'}p{--at-apply:leading-6}ul{padding-left:1.25rem;margin:16px 0;line-height:1.5em}li + li{margin-top:0.5rem}.dark{color-scheme:dark}code{--at-apply:'bg-[#e9e9e9] dark:bg-[#3a3a3a] dark:text-[#c9def1] text-[#476582] px-[6px] py-[3px] rounded break-all'}pre.shiki code{--at-apply:'bg-transparent dark:bg-transparent p-unset block'}.svp-code-block-wrapper{--at-apply:'bg-white dark:bg-[#011627] sm:rounded-lg text-[14px] mb-8 mx-[-5vw] sm:mx-none'}.svp-live-code--container{--at-apply:'mx-[-5vw] sm:mx-none'}.svp-live-code--container .svp-code-block-wrapper{--at-apply:'mx-none'}.svp-code-block{--at-apply:relative px-[18px] py-[12px]}.svp-code-block--title{--at-apply:'px-[18px] leading-10 font-700 b-b b-b-solid b-b-gray-2 dark:b-b-gray-8'}.svp-code-block--with-line-numbers{--at-apply:pl-10}.svp-code-block--line-numbers{--at-apply:'absolute left-0 top-0 bottom-0 py-inherit text-3 text-right text-gray-4 px-2 leading-[21px] b-r-solid b-r b-r-light-4 dark:b-r-gray-8';font-family:var(--svp-code-font)}.svp-code-block:hover .svp-code-block--lang{--at-apply:opacity-0}.c-expansion--body .svp-code-block{--at-apply:rounded-none}.c-expansion--body .svp-code-block-wrapper{--at-apply:mb-none}.svp-code-block--lang{--at-apply:'absolute top-2 right-3 z-100 text-cool-gray-3 dark:text-cool-gray-7 text-[12px] transition-300 transition-opacity'}.svp-code-block--command-line{--at-apply:absolute left-0 right-0 z-2 h-[1.5em]}.svp-code-block--focus{--at-apply:'bg-white dark:bg-black pointer-events-none bg-opacity-20 dark:bg-opacity-20 absolute left-0 right-0 z-4 transition-300 transition-opacity';backdrop-filter:blur(1.5px)}.svp-code-block--diff-bg-add{--at-apply:'bg-green-4 bg-opacity-20 dark:bg-green-8 dark:bg-opacity-30'}.svp-code-block--diff-bg-sub{--at-apply:'bg-rose-4 bg-opacity-20 dark:bg-red-8 dark:bg-opacity-30'}.svp-code-block--with-line-numbers .svp-code-block--diff-add,.svp-code-block--with-line-numbers .svp-code-block--diff-sub{--at-apply:pl-8}.svp-code-block--diff-add{--at-apply:text-green-4}.svp-code-block--diff-sub{--at-apply:text-rose-4}.svp-code-block--diff-add,.svp-code-block--diff-sub{--at-apply:absolute left-[4px] top-0 bottom-0 leading-[1.5em];font-family:var(--svp-code-font)}.svp-code-block--hl{--at-apply:'bg-black dark:bg-white bg-opacity-10 dark:bg-opacity-10'}.svp-code-block:hover .svp-code-block--focus{--at-apply:opacity-0}blockquote{--at-apply:'border-l-[4px] border-l-solid border-gray-4 m-none bg-gray-2 indent-[1em] text-gray-4 py-[4px] my-4 dark:border-l-gray-5 dark:bg-gray-8'}blockquote p{--at-apply:m-none}table{--at-apply:border-collapse w-full}table th{--at-apply:text-left p-2}table tbody tr{--at-apply:'border-t-1 border-t-solid border-gray-2 dark:border-gray-7'}table tbody tr td{--at-apply:p-2}.svp-anchor-item{--at-apply:relative bottom-[100px]}.svp-live-code--demo .svp-code-block-wrapper{--at-apply:'mb-0'}",
   map: null
 };
 const GlobalLayout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   compute_rest_props($$props, []);
   let $navCollapsed, $$unsubscribe_navCollapsed;
   let $sidebarCollapsed, $$unsubscribe_sidebarCollapsed;
+  let $page, $$unsubscribe_page;
   let $$unsubscribe_oldScrollY;
   let $$unsubscribe_scrollY;
-  let $$unsubscribe_innerWidth;
-  let $page, $$unsubscribe_page;
   let $sidebar, $$unsubscribe_sidebar;
   let $anchors, $$unsubscribe_anchors;
   $$unsubscribe_navCollapsed = subscribe(navCollapsed, (value) => $navCollapsed = value);
   $$unsubscribe_sidebarCollapsed = subscribe(sidebarCollapsed, (value) => $sidebarCollapsed = value);
+  $$unsubscribe_page = subscribe(page, (value) => $page = value);
   $$unsubscribe_oldScrollY = subscribe(oldScrollY, (value) => value);
   $$unsubscribe_scrollY = subscribe(scrollY, (value) => value);
-  $$unsubscribe_innerWidth = subscribe(innerWidth, (value) => value);
-  $$unsubscribe_page = subscribe(page, (value) => $page = value);
   $$unsubscribe_sidebar = subscribe(sidebar, (value) => $sidebar = value);
   $$unsubscribe_anchors = subscribe(anchors, (value) => $anchors = value);
+  resolveSidebar($page.route.id);
   let ajaxBar;
-  beforeNavigate(() => {
-    ajaxBar.start();
+  beforeNavigate(({ to }) => {
+    ajaxBar?.start();
+    resolveSidebar(to.route.id);
   });
-  afterNavigate(({ to }) => {
+  afterNavigate(() => {
     ajaxBar?.end();
     set_store_value(sidebarCollapsed, $sidebarCollapsed = true, $sidebarCollapsed);
     set_store_value(navCollapsed, $navCollapsed = true, $navCollapsed);
-    resolveSidebar(to.route.id);
   });
   $$result.css.add(css$1);
   let $$settled;
   let $$rendered;
   do {
     $$settled = true;
-    $$rendered = ` ${$page.error ? `${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})} ${validate_component(Error, "Error").$$render($$result, { error: $page.error }, {}, {})}` : `<main class="svelte-tkaw86">${validate_component(AjaxBar, "AjaxBar").$$render(
+    $$rendered = ` ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})} ${$page.error ? `${validate_component(Error, "Error").$$render($$result, { error: $page.error }, {}, {})}` : `<main class="svelte-1ftdggk">${validate_component(AjaxBar, "AjaxBar").$$render(
       $$result,
       { this: ajaxBar },
       {
@@ -563,7 +578,7 @@ const GlobalLayout = create_ssr_component(($$result, $$props, $$bindings, slots)
         }
       },
       {}
-    )} ${$sidebar ? `${validate_component(Sidebar, "Sidebar").$$render($$result, {}, {}, {})}` : ``} ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})} ${validate_component(Backdrop, "Backdrop").$$render(
+    )} ${$sidebar ? `${validate_component(Sidebar, "Sidebar").$$render($$result, {}, {}, {})}` : ``} ${validate_component(Backdrop, "Backdrop").$$render(
       $$result,
       {
         show: !$navCollapsed,
@@ -576,10 +591,9 @@ const GlobalLayout = create_ssr_component(($$result, $$props, $$bindings, slots)
   } while (!$$settled);
   $$unsubscribe_navCollapsed();
   $$unsubscribe_sidebarCollapsed();
+  $$unsubscribe_page();
   $$unsubscribe_oldScrollY();
   $$unsubscribe_scrollY();
-  $$unsubscribe_innerWidth();
-  $$unsubscribe_page();
   $$unsubscribe_sidebar();
   $$unsubscribe_anchors();
   return $$rendered;

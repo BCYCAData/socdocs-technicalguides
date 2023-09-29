@@ -19,7 +19,6 @@ var anchors = writable([]);
 var pages = writable([]);
 var scrollY = writable(0);
 var oldScrollY = writable(0);
-var innerWidth = writable(0);
 var scrollDirection = writable("up");
 var sidebar = writable(true);
 var resolvedSidebar = writable(Object.entries(themeOptions.sidebar || {}).reduce(function(all, _a) {
@@ -70,7 +69,7 @@ const External = create_ssr_component(($$result, $$props, $$bindings, slots) => 
 const Expansion_svelte_svelte_type_style_lang = "";
 function client_method(key) {
   {
-    if (key === "before_navigate" || key === "after_navigate") {
+    if (key === "before_navigate" || key === "after_navigate" || key === "on_navigate") {
       return () => {
       };
     } else {
@@ -98,9 +97,8 @@ export {
   scrollY as e,
   sidebar as f,
   anchors as g,
-  beforeNavigate as h,
-  innerWidth as i,
-  resolveSidebar as j,
+  resolveSidebar as h,
+  beforeNavigate as i,
   navCollapsed as n,
   oldScrollY as o,
   pages as p,

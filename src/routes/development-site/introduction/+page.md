@@ -1,9 +1,12 @@
 ---
-slug: blog-development-sveltekit
-title: Introduction
-section: Website Admin
-group: Administration
-role: admin_site
+title: Site Overview
+description: Introduction to Site Development 
 ---
 
-## Doing Site Stuff is Hard
+## Project Overview
+
+## Frontend Technologies
+
+## Backend Technologies
+
+## External APIs

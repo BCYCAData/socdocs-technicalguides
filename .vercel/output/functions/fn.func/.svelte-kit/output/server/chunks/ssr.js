@@ -290,13 +290,13 @@ export {
   missing_component as m,
   null_to_empty as n,
   onDestroy as o,
-  set_current_component as p,
-  current_component as q,
-  run_all as r,
+  noop as p,
+  safe_not_equal as q,
+  get_store_value as r,
   setContext as s,
-  get_store_value as t,
-  noop as u,
+  getContext as t,
+  set_current_component as u,
   validate_component as v,
-  safe_not_equal as w,
-  getContext as x
+  run_all as w,
+  current_component as x
 };

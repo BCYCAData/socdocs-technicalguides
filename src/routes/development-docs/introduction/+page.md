@@ -1,9 +1,6 @@
 ---
-slug: blog-development-sveltekit
-title: Introduction
-section: Website Admin
-group: Administration
-role: admin_site
+title: Documentation Development
+description: Introduction to developing the SOC documentation
 ---
 
-## Doing Site Stuff is Hard
+## Database Overview

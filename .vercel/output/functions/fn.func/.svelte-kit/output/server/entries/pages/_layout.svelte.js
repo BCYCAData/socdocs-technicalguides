@@ -59,7 +59,7 @@ const NavArrowDown = create_ssr_component(($$result, $$props, $$bindings, slots)
 });
 const NavItem_svelte_svelte_type_style_lang = "";
 const css$e = {
-  code: ".nav-item.svelte-1w19khn.svelte-1w19khn{--at-apply:flex items-center cursor-pointer position-relative z-1\n      cursor-pointer decoration-none px-3}.nav-item--icon.svelte-1w19khn.svelte-1w19khn{--at-apply:text-6}.nav-item--icon.svelte-1w19khn .dropdown.svelte-1w19khn{--uno:'text-4'}.nav-item--icon.svelte-1w19khn.svelte-1w19khn:not(:first-child)::after,.navbar-pc .toggle::after{--uno:'absolute left-0 bg-stone-2 w-[1px] top-[50%] h-[20px] dark:bg-stone-7';transform:translateY(-50%);content:' '}.nav-item--icon.svelte-1w19khn.svelte-1w19khn:first-of-type::after{--uno:'display-none sm:display-unset'}.nav-item--icon.svelte-1w19khn.svelte-1w19khn:hover{--at-apply:opacity-80}:not(.dropdown) > .nav-item:not(.nav-item--icon):hover{--at-apply:svp-gradient-text}.dropdown.svelte-1w19khn.svelte-1w19khn{--at-apply:'transition-transform transition-opacity transition-300 opacity-0 pointer-events-none  absolute top-0 right-0 bg-white dark:bg-[#232323] whitespace-nowrap z-3 rounded shadow-sm p-2';transform:translateY(72px)}.dropdown > .nav-item{--at-apply:'block py-2 px-4 decoration-none rounded hover:bg-svp-primary hover:bg-opacity-20 hover:text-svp-primary text-[#213547] dark:text-[#efefef]'}.dropdown > .nav-item:hover{background-image:none}.nav-item.svelte-1w19khn:hover .dropdown.svelte-1w19khn{--at-apply:opacity-100 pointer-events-initial;transform:translateY(54px)}.arrow.svelte-1w19khn.svelte-1w19khn{--at-apply:'flex items-center transition-transform transition-300 text-6 text-[#213547] dark:text-light-4'}.nav-item.svelte-1w19khn:hover .arrow.svelte-1w19khn{transform:rotate(180deg)}",
+  code: ".nav-item.svelte-12nytwi.svelte-12nytwi{--at-apply:flex items-center cursor-pointer position-relative z-1\n      cursor-pointer decoration-none px-3}.nav-item--icon.svelte-12nytwi.svelte-12nytwi{--at-apply:text-6}.nav-item--icon.svelte-12nytwi .dropdown.svelte-12nytwi{--uno:'text-4'}.nav-item--icon.svelte-12nytwi.svelte-12nytwi:not(:first-child)::after,.navbar-pc .toggle::after{--uno:'absolute left-0 bg-stone-2 w-[1px] top-[50%] h-[20px] dark:bg-stone-7';transform:translateY(-50%);content:' '}.nav-item--icon.svelte-12nytwi.svelte-12nytwi:first-of-type::after{--uno:'hidden sm:display-[unset]'}.nav-item--icon.svelte-12nytwi.svelte-12nytwi:hover{--at-apply:opacity-80}:not(.dropdown) > .nav-item:not(.nav-item--icon):hover{--at-apply:svp-gradient-text}.dropdown.svelte-12nytwi.svelte-12nytwi{--at-apply:'transition-transform transition-opacity transition-300 opacity-0 pointer-events-none  absolute top-0 right-0 bg-white dark:bg-[#232323] whitespace-nowrap z-3 rounded shadow-sm p-2';transform:translateY(72px)}.dropdown > .nav-item{--at-apply:'block py-2 px-4 decoration-none rounded hover:bg-svp-primary hover:bg-opacity-20 hover:text-svp-primary text-[#213547] dark:text-[#efefef]'}.dropdown > .nav-item:hover{background-image:none}.nav-item.svelte-12nytwi:hover .dropdown.svelte-12nytwi{--at-apply:opacity-100 pointer-events-initial;transform:translateY(54px)}.arrow.svelte-12nytwi.svelte-12nytwi{--at-apply:'flex items-center transition-transform transition-300 text-6 text-[#213547] dark:text-light-4'}.nav-item.svelte-12nytwi:hover .arrow.svelte-12nytwi{transform:rotate(180deg)}",
   map: null
 };
 const NavItem = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -84,9 +84,9 @@ const NavItem = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.builtInIcon(builtInIcon);
   $$result.css.add(css$e);
   return `${items && items.length ? `<div class="${[
-    "nav-item svelte-1w19khn",
+    "nav-item svelte-12nytwi",
     (builtInIcon ? "built-in-icon" : "") + " " + (icon ? "nav-item--icon" : "") + " " + (icon ? "nav-item--user-icon" : "")
-  ].join(" ").trim()}" role="link"${add_attribute("aria-label", title, 0)}>${typeof icon === "string" ? `<!-- HTML_TAG_START -->${icon}<!-- HTML_TAG_END -->` : `${escape(title)} <div class="arrow svelte-1w19khn">${validate_component(NavArrowDown, "NavArrowDown").$$render($$result, {}, {}, {})}</div>`} <div class="dropdown svelte-1w19khn">${each(items, (subItem) => {
+  ].join(" ").trim()}" role="link"${add_attribute("aria-label", title, 0)}>${typeof icon === "string" ? `<!-- HTML_TAG_START -->${icon}<!-- HTML_TAG_END -->` : `${escape(title)} <div class="arrow svelte-12nytwi">${validate_component(NavArrowDown, "NavArrowDown").$$render($$result, {}, {}, {})}</div>`} <div class="dropdown svelte-12nytwi">${each(items, (subItem) => {
     return `${validate_component(NavItem, "svelte:self").$$render($$result, Object.assign({}, subItem), {}, {})}`;
   })}</div></div>` : `${((tag) => {
     return tag ? `<${external ? "div" : "a"}${spread(
@@ -101,7 +101,7 @@ const NavItem = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         }
       ],
       {
-        classes: (icon ? "nav-item--icon" : "") + " svelte-1w19khn"
+        classes: (icon ? "nav-item--icon" : "") + " svelte-12nytwi"
       }
     )}>${is_void(tag) ? "" : `${slots.default ? slots.default({}) : ` ${typeof icon === "string" ? `<!-- HTML_TAG_START -->${icon}<!-- HTML_TAG_END -->` : `${escape(title)}`} ${external ? `${validate_component(External, "External").$$render($$result, {}, {}, {})}` : ``} `}`}${is_void(tag) ? "" : `</${tag}>`}` : "";
   })(external ? "div" : "a")}`}`;
@@ -236,7 +236,7 @@ const Expansion = create_ssr_component(($$result, $$props, $$bindings, slots) =>
 });
 const NavbarMobile_svelte_svelte_type_style_lang = "";
 const css$a = {
-  code: ".nav-trigger.svelte-6d3xbz{--at-apply:'ml-4 text-6 flex items-center sm:display-none'}.navbar-mobile.svelte-6d3xbz{--at-apply:'fixed top-[48px] left-0 right-0 bg-white dark:bg-black z-900 shadow-lg pb-4 dark:shadow-gray-8'}.navbar-mobile .nav-item{--at-apply:'leading-12 px-4'}.navbar-mobile .nav-item--icon{--uno:'h-12'}.navbar-mobile .c-expansion--title{--at-apply:'text-4 font-700'}.navbar-mobile .c-expansion .nav-item{--at-apply:'indent-[1em]'}",
+  code: ".nav-trigger.svelte-8qx7is{--at-apply:'ml-4 text-6 flex items-center sm:hidden'}.navbar-mobile.svelte-8qx7is{--at-apply:'fixed top-[48px] left-0 right-0 bg-white dark:bg-black z-900 shadow-lg pb-4 dark:shadow-gray-8'}.navbar-mobile .nav-item{--at-apply:'leading-12 px-4'}.navbar-mobile .nav-item--icon{--uno:'h-12'}.navbar-mobile .c-expansion--title{--at-apply:'text-4 font-700'}.navbar-mobile .c-expansion .nav-item{--at-apply:'indent-[1em]'}",
   map: null
 };
 const NavbarMobile = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -244,7 +244,7 @@ const NavbarMobile = create_ssr_component(($$result, $$props, $$bindings, slots)
   $$unsubscribe_navCollapsed = subscribe(navCollapsed, (value) => $navCollapsed = value);
   $$result.css.add(css$a);
   $$unsubscribe_navCollapsed();
-  return `<div class="nav-trigger svelte-6d3xbz" role="menu" tabindex="0">${$navCollapsed ? `${validate_component(TocMenu, "TocMenu").$$render($$result, {}, {}, {})}` : `${validate_component(TocClose, "TocClose").$$render($$result, {}, {}, {})}`}</div> ${!$navCollapsed ? `<nav class="navbar-mobile svelte-6d3xbz" aria-label="Menu">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})} ${each(themeOptions.navbar, (navItem) => {
+  return `<div class="nav-trigger svelte-8qx7is" role="menu" tabindex="0">${$navCollapsed ? `${validate_component(TocMenu, "TocMenu").$$render($$result, {}, {}, {})}` : `${validate_component(TocClose, "TocClose").$$render($$result, {}, {}, {})}`}</div> ${!$navCollapsed ? `<nav class="navbar-mobile svelte-8qx7is" aria-label="Menu">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})} ${each(themeOptions.navbar, (navItem) => {
     return `${navItem.items ? `${validate_component(Expansion, "Expansion").$$render($$result, { title: navItem.title, showIcon: false }, {}, {
       title: () => {
         return `<div slot="title">${navItem.icon ? `<div class="text-6"><!-- HTML_TAG_START -->${navItem.icon}<!-- HTML_TAG_END --> </div>` : `${escape(navItem.title)}`} </div>`;
@@ -278,7 +278,7 @@ const Backdrop = create_ssr_component(($$result, $$props, $$bindings, slots) => 
 });
 const Toc_svelte_svelte_type_style_lang = "";
 const css$8 = {
-  code: ".toc.svelte-1ulaavb.svelte-1ulaavb{--at-apply:'transition-transform transition transition-300 py-4 text-gray-5 dark:text-gray-2 sm:z-3 leading-[2em] bottom-0 right-0 sm:top-[80px] fixed text-3.5 sm:w-[22vw] w-[70vw] bg-white dark:bg-zinc-8 sm:bg-transparent top-0 z-988 sm:dark:bg-transparent'}.toc.svelte-1ulaavb a.svelte-1ulaavb{--uno:'text-[#213547] dark:text-gray-3'}.title.svelte-1ulaavb.svelte-1ulaavb{--at-apply:'font-bold pl-4 text-gray-8 dark:text-gray-2'}.item.svelte-1ulaavb.svelte-1ulaavb{--at-apply:'pl-4 relative z-3 block truncate cursor-default';text-indent:calc((var(--heading-depth) - 2) * 1.2em)}.item.svelte-1ulaavb.svelte-1ulaavb:not(.active){--at-apply:'hover:text-svp-primary cursor-pointer'}.anchors.svelte-1ulaavb.svelte-1ulaavb{--at-apply:'relative z-3 sm:w-[15vw] max-h-[70vh] overflow-y-auto overflow-x-hidden'}.anchors.svelte-1ulaavb.svelte-1ulaavb::after{--at-apply:'absolute left-[1px] top-0 bottom-0 w-[1px] bg-light-7 dark:bg-gray-8 display-none sm:display-block';content:' '}.active-bar.svelte-1ulaavb.svelte-1ulaavb{--at-apply:'absolute z-2 left-0 h-[2em] border-l-[3px] border-l-solid border-svp-primary border-opacity-80 w-full transition-transform transition-300 top-0';transform:translateY(var(--bar-top))}.collapsed.svelte-1ulaavb.svelte-1ulaavb{--at-apply:'sm:translate-x-0';transform:translateX(100%)}",
+  code: ".toc.svelte-17co0a5.svelte-17co0a5{--at-apply:'transition-transform transition transition-300 py-4 text-gray-5 dark:text-gray-2 sm:z-3 leading-[2em] bottom-0 right-0 sm:top-[80px] fixed text-3.5 sm:w-[22vw] w-[70vw] bg-white dark:bg-zinc-8 sm:bg-transparent top-0 z-988 sm:dark:bg-transparent'}.toc.svelte-17co0a5 a.svelte-17co0a5{--uno:'text-[#213547] dark:text-gray-3'}.title.svelte-17co0a5.svelte-17co0a5{--at-apply:'font-bold pl-4 text-gray-8 dark:text-gray-2'}.item.svelte-17co0a5.svelte-17co0a5{--at-apply:'pl-4 relative z-3 block truncate cursor-default';text-indent:calc((var(--heading-depth) - 2) * 1.2em)}.item.svelte-17co0a5.svelte-17co0a5:not(.active){--at-apply:'hover:text-svp-primary cursor-pointer'}.anchors.svelte-17co0a5.svelte-17co0a5{--at-apply:'relative z-3 sm:w-[15vw] max-h-[70vh] overflow-y-auto overflow-x-hidden'}.anchors.svelte-17co0a5.svelte-17co0a5::after{--at-apply:'absolute left-[1px] top-0 bottom-0 w-[1px] bg-light-7 dark:bg-gray-8 hidden sm:block';content:' '}.active-bar.svelte-17co0a5.svelte-17co0a5{--at-apply:'absolute z-2 left-0 h-[2em] border-l-[3px] border-l-solid border-svp-primary border-opacity-80 w-full transition-transform transition-300 top-0';transform:translateY(var(--bar-top))}.collapsed.svelte-17co0a5.svelte-17co0a5{--at-apply:'sm:translate-x-0';transform:translateX(100%)}",
   map: null
 };
 const DEFAULT_ON_THIS_PAGE = "On this page";
@@ -297,14 +297,14 @@ const Toc = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$8);
   $$unsubscribe_tocCollapsed();
   $$unsubscribe_page();
-  return ` ${anchors2.length ? `<div class="${["toc svelte-1ulaavb", $tocCollapsed ? "collapsed" : ""].join(" ").trim()}"><div class="title svelte-1ulaavb">${escape(themeOptions?.i18n?.onThisPage || DEFAULT_ON_THIS_PAGE)}</div> <div class="anchors svelte-1ulaavb"${add_attribute("style", `--bar-top: calc(${activeIdx * 2}em);`, 0)}>${each(anchors2, (an, i) => {
+  return ` ${anchors2.length ? `<div class="${["toc svelte-17co0a5", $tocCollapsed ? "collapsed" : ""].join(" ").trim()}"><div class="title svelte-17co0a5">${escape(themeOptions?.i18n?.onThisPage || DEFAULT_ON_THIS_PAGE)}</div> <div class="anchors svelte-17co0a5"${add_attribute("style", `--bar-top: calc(${activeIdx * 2}em);`, 0)}>${each(anchors2, (an, i) => {
     let active = activeIdx === i;
-    return ` <a${add_attribute("href", `#${an.slugId}`, 0)} class="${["item svelte-1ulaavb", active ? "active" : ""].join(" ").trim()}"${add_attribute("style", `--heading-depth: ${an.depth};`, 0)}>${escape(an.title)} </a>`;
-  })} <div class="active-bar svelte-1ulaavb"></div></div></div>` : ``} ${validate_component(Backdrop, "Backdrop").$$render($$result, { show: !$tocCollapsed }, {}, {})}`;
+    return ` <a${add_attribute("href", `#${an.slugId}`, 0)} class="${["item svelte-17co0a5", active ? "active" : ""].join(" ").trim()}"${add_attribute("style", `--heading-depth: ${an.depth};`, 0)}>${escape(an.title)} </a>`;
+  })} <div class="active-bar svelte-17co0a5"></div></div></div>` : ``} ${validate_component(Backdrop, "Backdrop").$$render($$result, { show: !$tocCollapsed }, {}, {})}`;
 });
 const MobileSubNav_svelte_svelte_type_style_lang = "";
 const css$7 = {
-  code: ".sub-nav.svelte-d6nxno{--uno:'flex items-center justify-between sm:display-none px-4 py-2'}",
+  code: ".sub-nav.svelte-139s4k1{--uno:'flex items-center justify-between sm:hidden px-4 py-2'}",
   map: null
 };
 const MobileSubNav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -315,11 +315,11 @@ const MobileSubNav = create_ssr_component(($$result, $$props, $$bindings, slots)
   $$result.css.add(css$7);
   $$unsubscribe_tocCollapsed();
   $$unsubscribe_sidebarCollapsed();
-  return `<nav class="sub-nav svelte-d6nxno" aria-label="Browse docs"><div role="button" tabindex="0" class="i-ic-round-menu-open text-6"></div> <div role="button" tabindex="0">${escape(themeOptions?.i18n?.onThisPage || DEFAULT_ON_THIS_PAGE)}</div> </nav>`;
+  return `<nav class="sub-nav svelte-139s4k1" aria-label="Browse docs"><div role="button" tabindex="0" class="i-ic-round-menu-open text-6"></div> <div role="button" tabindex="0">${escape(themeOptions?.i18n?.onThisPage || DEFAULT_ON_THIS_PAGE)}</div> </nav>`;
 });
 const Navbar_svelte_svelte_type_style_lang = "";
 const css$6 = {
-  code: ".header.svelte-wxxf5d{--at-apply:'transition-transform fixed top-0 left-0 right-0 sm:h-[73px] z-888 dark:bg-opacity-40';backdrop-filter:blur(5px)}.hidden-in-mobile.svelte-wxxf5d{--uno:'translate-y-[-100%] sm:translate-y-0'}.logo-container.svelte-wxxf5d{--at-apply:'display-none sm:display-block'}.header-inner.svelte-wxxf5d{--at-apply:'sm:w-[80vw] h-full flex items-stretch justify-between mx-auto'}.left.svelte-wxxf5d{--at-apply:flex items-center}.doc-search.svelte-wxxf5d{--at-apply:'flex-grow flex items-center relative transition-500 transition-left'}.doc-search.is-home.svelte-wxxf5d{--at-apply:left-2}.doc-search.move.svelte-wxxf5d{--at-apply:'sm:left-[15.5vw]'}.navbar-pc.svelte-wxxf5d{--at-apply:'items-stretch flex'}.nav-links.svelte-wxxf5d{--at-apply:flex items-stretch flex-grow justify-end}.navbar-pc.svelte-wxxf5d .nav-item:not(.nav-item--icon),.navbar-pc.svelte-wxxf5d .nav-item--user-icon{--uno:'display-none sm:display-flex'}",
+  code: ".header.svelte-ieqmjd{--at-apply:'transition-transform fixed top-0 left-0 right-0 sm:h-[73px] z-888 dark:bg-opacity-40';backdrop-filter:blur(5px)}.hidden-in-mobile.svelte-ieqmjd{--uno:'translate-y-[-100%] sm:translate-y-0'}.logo-container.svelte-ieqmjd{--at-apply:'hidden sm:block'}.header-inner.svelte-ieqmjd{--at-apply:'sm:w-[80vw] h-full flex items-stretch justify-between mx-auto'}.left.svelte-ieqmjd{--at-apply:flex items-center}.doc-search.svelte-ieqmjd{--at-apply:'flex-grow flex items-center relative transition-500 transition-left'}.doc-search.is-home.svelte-ieqmjd{--at-apply:left-2}.doc-search.move.svelte-ieqmjd{--at-apply:'sm:left-[15.5vw]'}.navbar-pc.svelte-ieqmjd{--at-apply:'items-stretch flex'}.nav-links.svelte-ieqmjd{--at-apply:flex items-stretch flex-grow justify-end}.navbar-pc.svelte-ieqmjd .nav-item:not(.nav-item--icon),.navbar-pc.svelte-ieqmjd .nav-item--user-icon{--uno:'hidden sm:flex'}",
   map: null
 };
 const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -336,10 +336,10 @@ const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   hasError = $page.error;
   $$unsubscribe_page();
   $$unsubscribe_scrollDirection();
-  return `<header class="${["header svelte-wxxf5d", $scrollDirection === "down" ? "hidden-in-mobile" : ""].join(" ").trim()}"><div class="header-inner svelte-wxxf5d"><div class="left svelte-wxxf5d">${validate_component(NavbarMobile, "NavbarMobile").$$render($$result, {}, {}, {})} ${hasError || isHome ? `<div class="logo-container svelte-wxxf5d">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}</div>` : ``}</div> ${themeOptions.docsearch ? `<div class="${[
-    "doc-search svelte-wxxf5d",
+  return `<header class="${["header svelte-ieqmjd", $scrollDirection === "down" ? "hidden-in-mobile" : ""].join(" ").trim()}"><div class="header-inner svelte-ieqmjd"><div class="left svelte-ieqmjd">${validate_component(NavbarMobile, "NavbarMobile").$$render($$result, {}, {}, {})} ${hasError || isHome ? `<div class="logo-container svelte-ieqmjd">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})}</div>` : ``}</div> ${themeOptions.docsearch ? `<div class="${[
+    "doc-search svelte-ieqmjd",
     (isHome ? "is-home" : "") + " " + (!isHome && !hasError ? "move" : "")
-  ].join(" ").trim()}">${validate_component(Search, "Search").$$render($$result, Object.assign({}, themeOptions.docsearch), {}, {})}</div>` : ``} <nav class="nav-links svelte-wxxf5d" aria-label="Menu"><div class="navbar-pc svelte-wxxf5d"><div class="sm:display-contents display-none">${each(themeOptions.navbar, (navItem) => {
+  ].join(" ").trim()}">${validate_component(Search, "Search").$$render($$result, Object.assign({}, themeOptions.docsearch), {}, {})}</div>` : ``} <nav class="nav-links svelte-ieqmjd" aria-label="Menu"><div class="navbar-pc svelte-ieqmjd"><div class="sm:flex none">${each(themeOptions.navbar, (navItem) => {
     return `${validate_component(NavItem, "NavItem").$$render($$result, Object.assign({}, navItem), {}, {})}`;
   })}</div> ${`${validate_component(NavItem, "NavItem").$$render(
     $$result,
@@ -422,7 +422,7 @@ const PointLeft = create_ssr_component(($$result, $$props, $$bindings, slots) =>
 });
 const SidebarGroup_svelte_svelte_type_style_lang = "";
 const css$4 = {
-  code: ".sidebar-group.svelte-1oujmou:not(:last-of-type){--at-apply:'border-b-solid border-b border-light-8 dark:border-b-gray-7 mb-4 pb-4'}.group-title.svelte-1oujmou{--at-apply:'font-bold text-slate-8 dark:text-slate-2 mb-2 sm:mb-4 flex items-center justify-between'}.links.svelte-1oujmou{--at-apply:leading-8 overflow-hidden}.collapse-control.svelte-1oujmou{--at-apply:'transition transition-200 transition-bg transition-transform cursor-pointer text-5 hover:bg-gray-2 active:bg-gray-3 dark:hover:bg-gray-8 dark:active:bg-gray-7 w-[28px] h-[28px] flex items-center justify-center rounded'}.arrow.svelte-1oujmou{--at-apply:flex items-center transition-300 transition-transform}.collapsed.svelte-1oujmou{--at-apply:rotate--90}.active-icon.svelte-1oujmou{--at-apply:'text-svp-primary ml-4 flex items-center text-5'}",
+  code: ".nested.svelte-1oalysk{--uno:'pl-4'}.with-mb.svelte-1oalysk{--uno:'mb-2 sm:mb-4'}.sidebar-group.svelte-1oalysk:not(:last-of-type){--at-apply:'border-b-solid border-b border-light-8 dark:border-b-gray-7 mb-4 pb-4'}.group-title.svelte-1oalysk{--at-apply:'font-bold text-slate-8 dark:text-slate-2 flex items-center justify-between'}.links.svelte-1oalysk{--at-apply:leading-8 overflow-hidden}.collapse-control.svelte-1oalysk{--at-apply:'transition transition-200 transition-bg transition-transform cursor-pointer text-5 hover:bg-gray-2 active:bg-gray-3 dark:hover:bg-gray-8 dark:active:bg-gray-7 w-[28px] h-[28px] flex items-center justify-center rounded'}.arrow.svelte-1oalysk{--at-apply:flex items-center transition-300 transition-transform}.collapsed.svelte-1oalysk{--at-apply:rotate--90}.active-icon.svelte-1oalysk{--at-apply:'text-svp-primary ml-4 flex items-center text-5'}",
   map: null
 };
 const SidebarGroup = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -432,33 +432,36 @@ const SidebarGroup = create_ssr_component(($$result, $$props, $$bindings, slots)
   let { items = [] } = $$props;
   let { title = "" } = $$props;
   let { collapsible = false } = $$props;
+  let { nested = false } = $$props;
   if ($$props.items === void 0 && $$bindings.items && items !== void 0)
     $$bindings.items(items);
   if ($$props.title === void 0 && $$bindings.title && title !== void 0)
     $$bindings.title(title);
   if ($$props.collapsible === void 0 && $$bindings.collapsible && collapsible !== void 0)
     $$bindings.collapsible(collapsible);
+  if ($$props.nested === void 0 && $$bindings.nested && nested !== void 0)
+    $$bindings.nested(nested);
   $$result.css.add(css$4);
   routeId = $page.route.id;
   $$unsubscribe_page();
-  return `<div class="sidebar-group svelte-1oujmou"><div class="group-title svelte-1oujmou"><div>${escape(title)}</div> ${collapsible ? `<div class="collapse-control svelte-1oujmou" role="button" tabindex="0" aria-label="Collapsable button"><div class="${["arrow svelte-1oujmou", ""].join(" ").trim()}">${validate_component(ArrowDown, "ArrowDown").$$render($$result, {}, {}, {})}</div></div>` : ``}</div> ${`<div class="links svelte-1oujmou">${each(items, ({ to, title: title2 }) => {
-    let active = routeId.endsWith("/") ? to === routeId : to === `${routeId}/`;
-    return ` ${validate_component(Link, "Link").$$render(
+  return `<div class="${["sidebar-group svelte-1oalysk", nested ? "nested" : ""].join(" ").trim()}"><div class="${["group-title svelte-1oalysk", !nested ? "with-mb" : ""].join(" ").trim()}"><div>${escape(title)}</div> ${collapsible ? `<div class="collapse-control svelte-1oalysk" role="button" tabindex="0" aria-label="Collapsable button"><div class="${["arrow svelte-1oalysk", ""].join(" ").trim()}">${validate_component(ArrowDown, "ArrowDown").$$render($$result, {}, {}, {})}</div></div>` : ``}</div> ${`<div class="links svelte-1oalysk">${each(items, (item) => {
+    let active = routeId.endsWith("/") ? item.to === routeId : item.to === `${routeId}/`;
+    return ` ${Array.isArray(item.items) && item.items.length ? `${validate_component(SidebarGroup, "svelte:self").$$render($$result, Object.assign({}, item, { nested: true }), {}, {})}` : `${validate_component(Link, "Link").$$render(
       $$result,
       {
-        to,
+        to: item.to,
         active,
-        label: title2,
+        label: item.title,
         inline: false,
         highlight: false
       },
       {},
       {
         default: () => {
-          return `${active ? `<div class="active-icon svelte-1oujmou">${validate_component(PointLeft, "PointLeft").$$render($$result, {}, {}, {})} </div>` : ``} `;
+          return `${active ? `<div class="active-icon svelte-1oalysk">${validate_component(PointLeft, "PointLeft").$$render($$result, {}, {}, {})} </div>` : ``} `;
         }
       }
-    )}`;
+    )}`}`;
   })}</div>`} </div>`;
 });
 const Close = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -466,7 +469,7 @@ const Close = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 const Sidebar_svelte_svelte_type_style_lang = "";
 const css$3 = {
-  code: ".is-home.svelte-1j2stt8{--at-apply:'sm:display-none'}.theme-default-sidebar.svelte-1j2stt8{--at-apply:'fixed top-0 left-0 bottom-0 pr-6 pb-4 sm:pb-32 overflow-y-auto bg-light-6 dark:bg-dark-9 z-999 sm:w-[25vw] w-[70vw] pl-4 sm:pl-[5vw] md:pl-[10vw] box-border transition-transform transition-300 shadow-md sm:shadow-none'}.sidebar-logo.svelte-1j2stt8{--at-apply:'sm:h-[72px] flex items-center justify-between mb-4 py-4 sm:py-0 sticky top-0 bg-inherit border-b-solid border-b border-light-8 dark:border-b-gray-7'}.collapsed.svelte-1j2stt8{--at-apply:'sm:translate-x-0';transform:translateX(-100%)}.close.svelte-1j2stt8{--at-apply:'text-5 flex items-center sm:display-none ml-4'}",
+  code: ".is-home.svelte-z5zf4y{--at-apply:'sm:hidden'}.theme-default-sidebar.svelte-z5zf4y{--at-apply:'fixed top-0 left-0 bottom-0 pr-6 pb-4 sm:pb-32 overflow-y-auto bg-light-6 dark:bg-dark-9 z-999 sm:w-[25vw] w-[70vw] pl-4 sm:pl-[5vw] md:pl-[10vw] box-border transition-transform transition-300 shadow-md sm:shadow-none'}.sidebar-logo.svelte-z5zf4y{--at-apply:'sm:h-[72px] flex items-center justify-between mb-4 py-4 sm:py-0 sticky top-0 bg-inherit border-b-solid border-b border-light-8 dark:border-b-gray-7'}.collapsed.svelte-z5zf4y{--at-apply:'sm:translate-x-0';transform:translateX(-100%)}.close.svelte-z5zf4y{--at-apply:'text-5 flex items-center sm:hidden ml-4'}",
   map: null
 };
 const Sidebar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -485,9 +488,9 @@ const Sidebar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_page();
   $$unsubscribe_resolvedSidebar();
   return `<aside class="${[
-    "theme-default-sidebar svelte-1j2stt8",
+    "theme-default-sidebar svelte-z5zf4y",
     ($sidebarCollapsed ? "collapsed" : "") + " " + (isHome ? "is-home" : "")
-  ].join(" ").trim()}"><div class="sidebar-logo svelte-1j2stt8">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})} <div class="close svelte-1j2stt8" role="button" tabindex="0">${validate_component(Close, "Close").$$render($$result, {}, {}, {})}</div></div> ${each($resolvedSidebar, (sidebarItem) => {
+  ].join(" ").trim()}"><div class="sidebar-logo svelte-z5zf4y">${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})} <div class="close svelte-z5zf4y" role="button" tabindex="0">${validate_component(Close, "Close").$$render($$result, {}, {}, {})}</div></div> ${each($resolvedSidebar, (sidebarItem) => {
     let hasItems = Array.isArray(sidebarItem.items);
     return ` ${validate_component(SidebarGroup, "SidebarGroup").$$render(
       $$result,
@@ -566,8 +569,10 @@ const GlobalLayout = create_ssr_component(($$result, $$props, $$bindings, slots)
   $$result.css.add(css$1);
   let $$settled;
   let $$rendered;
+  let previous_head = $$result.head;
   do {
     $$settled = true;
+    $$result.head = previous_head;
     $$rendered = ` ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})} ${$page.error ? `${validate_component(Error, "Error").$$render($$result, { error: $page.error }, {}, {})}` : `<main class="svelte-1ftdggk">${validate_component(AjaxBar, "AjaxBar").$$render(
       $$result,
       { this: ajaxBar },

@@ -36,6 +36,7 @@ const config = defineConfig({
 				description: "Documentation for the 'Strengthen Our Community' website"
 			},
 			remarkPlugins: [
+				// @ts-ignore
 				[
 					mermaid,
 					{

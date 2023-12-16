@@ -105,64 +105,57 @@ export default {
 		}
 	], '/development-db/': [
 		{
-			title: 'Database Development sidebar',
-			to: '/development-db/'
+			title: 'Database Development',
+			to: '/development-db/overview/'
 		}, {
 			title: 'Development Environment',
 			collapsible: true,
+			items: [
+				{
+					title: 'Overview',
+					to: '/development-db/environment/'
+				}, {
+					title: 'Supabase dashboard',
+					to: '/development-db/environment/supabase-dashboard/'
+				}, {
+					title: 'Local Development',
+					to: '/development-db/environment/local-development/'
+				}
+			]
+		}, {
+			title: 'Administration',
+			to: '/development-db/soc-database/administration/'
+		}, {
+			title: 'External Connections',
+			collapsible: true,
 			items: [{
 				title: 'Overview',
-				to: '/development-db/environment/'
-			}, {
-				title: 'Supabase dashboard',
-				to: '/development-db/environment/supabase-dashboard/'
-			}, {
-				title: 'Local Development',
-				to: '/development-db/environment/local-development/'
-			}, {
-				title: 'External Connections',
 				to: '/development-db/environment/external-clients/'
 			}, {
-				title: 'External Clients',
-				collapsible: true,
-				items: [{
-					title: 'Dbeaver',
-					to: '/development-db/environment/external-clients/dbeaver/'
-				},
-				{
-					title: 'PG Admin',
-					to: '/development-db/environment/external-clients/pgadmin/'
-				}
-					,
-				{
-					title: 'QGIS',
-					to: '/development-db/environment/external-clients/qgis/'
-				}
-					,
-				{
-					title: 'Arc GIS',
-					to: '/development-db/environment/external-clients/arcgis/'
-				}
-					,
-				{
-					title: 'Leaflet',
-					to: '/development-db/environment/external-clients/leaflet/'
-				}
-				]
+				title: 'Dbeaver',
+				to: '/development-db/environment/external-clients/dbeaver/'
+			}, {
+				title: 'PG Admin',
+				to: '/development-db/environment/external-clients/pgadmin/'
+			}, {
+				title: 'QGIS',
+				to: '/development-db/environment/external-clients/qgis/'
+			}, {
+				title: 'Arc GIS',
+				to: '/development-db/environment/external-clients/arcgis/'
+			}, {
+				title: 'Leaflet',
+				to: '/development-db/environment/external-clients/leaflet/'
 			}
 			]
 		}, {
-			title: 'SOC Database Overview',
-			to: '/development-db/soc-database/',
-		}, {
-			title: 'SOC Database Design Guide',
+			title: 'SOC Database Design',
 			collapsible: true,
 			items: [
 				{
 					title: 'Design Overview',
-					to: '/development-db/soc-database/design/'
-				},
-				{
+					to: '/development-db/soc-database/design/overview/'
+				}, {
 					title: 'Roles',
 					to: '/development-db/soc-database/design/roles/'
 				}, {
@@ -174,79 +167,89 @@ export default {
 				}, {
 					title: 'auth Schema',
 					to: '/development-db/soc-database/design/schemas/auth/'
-				},
-				{
-					title: 'auth Schema Definitions',
-					collapsible: true,
-					items: [
-						{
-							title: 'auth Tables',
-							to: '/development-db/soc-database/design/schemas/auth/tables'
-						}, {
-							title: 'auth Views',
-							to: '/development-db/soc-database/design/schemas/auth/views/'
-						}, {
-							title: 'auth Functions',
-							to: '/development-db/soc-database/design/schemas/auth/functions/'
-						}, {
-							title: 'auth Sequences',
-							to: '/development-db/soc-database/design/schemas/auth/sequences/'
-						}, {
-							title: 'auth Trigger Functions',
-							to: '/development-db/soc-database/design/schemas/auth/trigger-functions'
-						}]
 				}, {
 					title: 'private Schema',
 					to: '/development-db/soc-database/design/schemas/private/'
-				}
-				, {
-					title: 'private Schema Definitions',
-					collapsible: true, items: [
-						{
-							title: 'private Tables',
-							to: '/development-db/soc-database/design/schemas/private/tables'
-						}, {
-							title: 'private Views',
-							to: '/development-db/soc-database/design/schemas/private/views/'
-						}, {
-							title: 'private Functions',
-							to: '/development-db/soc-database/design/schemas/private/functions/'
-						}, {
-							title: 'private Sequences',
-							to: '/development-db/soc-database/design/schemas/private/sequences/'
-						}, {
-							title: 'private Trigger Functions',
-							to: '/development-db/soc-database/design/schemas/private/trigger-functions'
-						}
-					]
 				}, {
 					title: 'public Schema',
 					to: '/development-db/soc-database/design/schemas/public/'
+				},
+			]
+		}, {
+			title: 'SOC Database Processes',
+			collapsible: true,
+			items: [
+				{
+					title: 'Processes Overview',
+					to: '/development-db/soc-database/processes/overview/'
 				}, {
-					title: 'private Schema Definitions',
-					collapsible: true, items: [
-						{
-							title: 'public Tables',
-							to: '/development-db/soc-database/design/schemas/public/tables'
-						}, {
-							title: 'public Views',
-							to: '/development-db/soc-database/design/schemas/public/views/'
-						}, {
-							title: 'public Functions',
-							to: '/development-db/soc-database/design/schemas/public/functions/'
-						}, {
-							title: 'public Sequences',
-							to: '/development-db/soc-database/design/schemas/public/sequences/'
-						}, {
-							title: 'public Trigger Functions',
-							to: '/development-db/soc-database/design/schemas/public/trigger-functions'
-						}
-					]
+					title: 'Register User',
+					to: '/development-db/soc-database/processes/auth/login/'
+				}, {
+					title: 'Log In User',
+					to: '/development-db/soc-database/processes/auth/register/'
+				},
+			]
+		}, {
+			title: 'auth Schema Definitions',
+			collapsible: true,
+			items: [
+				{
+					title: 'auth Tables',
+					to: '/development-db/soc-database/design/schemas/auth/tables/'
+				}, {
+					title: 'auth Views',
+					to: '/development-db/soc-database/design/schemas/auth/views/'
+				}, {
+					title: 'auth Functions',
+					to: '/development-db/soc-database/design/schemas/auth/functions/'
+				}, {
+					title: 'auth Sequences',
+					to: '/development-db/soc-database/design/schemas/auth/sequences/'
+				}, {
+					title: 'auth Trigger Functions',
+					to: '/development-db/soc-database/design/schemas/auth/trigger-functions/'
+				}]
+		}, {
+			title: 'private Schema Definitions',
+			collapsible: true, items: [
+				{
+					title: 'private Tables',
+					to: '/development-db/soc-database/design/schemas/private/tables/'
+				}, {
+					title: 'private Views',
+					to: '/development-db/soc-database/design/schemas/private/views/'
+				}, {
+					title: 'private Functions',
+					to: '/development-db/soc-database/design/schemas/private/functions/'
+				}, {
+					title: 'private Sequences',
+					to: '/development-db/soc-database/design/schemas/private/sequences/'
+				}, {
+					title: 'private Trigger Functions',
+					to: '/development-db/soc-database/design/schemas/private/trigger-functions/'
 				}
 			]
 		}, {
-			title: 'Administration',
-			to: '/development-db/soc-database/administration/'
+			title: 'private Schema Definitions',
+			collapsible: true, items: [
+				{
+					title: 'public Tables',
+					to: '/development-db/soc-database/design/schemas/public/tables/'
+				}, {
+					title: 'public Views',
+					to: '/development-db/soc-database/design/schemas/public/views/'
+				}, {
+					title: 'public Functions',
+					to: '/development-db/soc-database/design/schemas/public/functions/'
+				}, {
+					title: 'public Sequences',
+					to: '/development-db/soc-database/design/schemas/public/sequences/'
+				}, {
+					title: 'public Trigger Functions',
+					to: '/development-db/soc-database/design/schemas/public/trigger-functions/'
+				}
+			]
 		}
 	],
 	'/development-docs/': [

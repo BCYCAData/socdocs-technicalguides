@@ -155,3 +155,15 @@
  .page-switcher.s-4w-9_QHwulQo:hover {
      border-color: #c2410c !important;
  }
+
+ .links.s-4J4nxBgs_Mta {
+     background-color: rgb(188, 188, 188, 0.3);
+ }
+
+ .group-title.s-4J4nxBgs_Mta.with-mb {
+     margin-bottom: 0;
+ }
+
+ .theme-default-sidebar.s-9Vf9XTllhwUZ.collapsed {
+     padding-left: 2vw;
+ }

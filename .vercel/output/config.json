@@ -2,17 +2,6 @@
 	"version": 3,
 	"routes": [
 		{
-			"src": "/development-db",
-			"dest": "/development-db/"
-		},
-		{
-			"src": "/development-db/",
-			"status": 308,
-			"headers": {
-				"Location": "/development-db"
-			}
-		},
-		{
 			"src": "/development-db/environment",
 			"dest": "/development-db/environment/"
 		},
@@ -109,6 +98,17 @@
 			"status": 308,
 			"headers": {
 				"Location": "/development-db/environment/supabase-dashboard"
+			}
+		},
+		{
+			"src": "/development-db/overview",
+			"dest": "/development-db/overview/"
+		},
+		{
+			"src": "/development-db/overview/",
+			"status": 308,
+			"headers": {
+				"Location": "/development-db/overview"
 			}
 		},
 		{
@@ -580,9 +580,6 @@
 		"index.html": {
 			"path": ""
 		},
-		"development-db.html": {
-			"path": "development-db"
-		},
 		"development-db/environment.html": {
 			"path": "development-db/environment"
 		},
@@ -609,6 +606,9 @@
 		},
 		"development-db/environment/supabase-dashboard.html": {
 			"path": "development-db/environment/supabase-dashboard"
+		},
+		"development-db/overview.html": {
+			"path": "development-db/overview"
 		},
 		"development-db/soc-database.html": {
 			"path": "development-db/soc-database"

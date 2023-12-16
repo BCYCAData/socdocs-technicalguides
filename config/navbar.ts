@@ -10,14 +10,17 @@ export default [
 	},
 	{
 		title: 'Database Development',
-		to: '/development-db/',
 		items: [
 			{
-				title: 'Environment title',
+				title: 'Database Development',
+				to: '/development-db/overview/'
+			},
+			{
+				title: 'Development Environment',
 				to: '/development-db/environment/'
 			},
 			{
-				title: 'SOC Database title',
+				title: 'SOC Database Design',
 				to: '/development-db/soc-database/'
 			}
 		]

@@ -1,6 +1,6 @@
 ---
-title: Introduction
-description: Introduction to the Database Development guide
+title: SOC Database
+description: Overview of developing the SOC database
 ---
 
-## Database Overview
+## Database Development Overview

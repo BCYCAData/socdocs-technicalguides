@@ -41,6 +41,7 @@ const config = defineConfig({
 					mermaid,
 					{
 						// ...mermaid options
+						theme: 'dark',
 					}
 				]
 			]

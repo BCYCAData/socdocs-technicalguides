@@ -5,7 +5,7 @@ tagline: Documentation for the Strengthen Our Community Project and Website.
 actions:
   - label: Go to the website
     type: primary
-    to: https://strengthen-our-community.vercel.app/
+    to: https://strengthen-our-community.vercel.app
     external: true
 features:
   - title: For Site Developers

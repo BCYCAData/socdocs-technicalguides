@@ -17,20 +17,29 @@ export default {
 					title: 'Technology',
 					to: '/development-site/introduction/technologies/'
 				}, {
-					title: 'User Journey',
-					to: '/development-site/introduction/user-journey/'
+					title: 'Getting Started',
+					to: '/development-site/introduction/getting-started/'
 				}
 			]
 		}, {
-			title: 'Component Architecture',
+			title: 'User Journeys',
 			collapsible: true,
 			items: [
 				{
-					title: 'Top-Level Components',
-					to: '/development-site/introduction/'
+					title: 'Overview',
+					to: '/development-site/user-journeys/overview/'
 				}, {
-					title: 'Reusable Components',
-					to: '/development-site/mapping/property-map/'
+					title: 'Casual Users',
+					to: '/development-site/user-journeys/casual-user/'
+				}, {
+					title: 'New Users',
+					to: '/development-site/user-journeys/new-user/'
+				}, {
+					title: 'Registered Users',
+					to: '/development-site/user-journeys/registered-user/'
+				}, {
+					title: 'Admin Users',
+					to: '/development-site/user-journeys/admin-user/'
 				}
 			]
 		}, {
@@ -38,44 +47,32 @@ export default {
 			collapsible: true,
 			items: [
 				{
-					title: 'Home',
+					title: '/home',
 					to: '/development-site/routes/home/'
 				}, {
-					title: 'About Route',
+					title: '/about',
 					to: '/development-site/routes/about/'
 				}, {
-					title: 'Contact Route',
+					title: '/contact',
 					to: '/development-site/routes/contact/'
 				}, {
-					title: 'Policies Route',
+					title: '/policies',
 					to: '/development-site/routes/policies/'
 				}, {
-					title: 'Authentication Route',
-					to: '/development-site/routes/authentication/'
-				}, {
-					title: 'User Profile Route',
-					to: '/development-site/routes/profile/'
-				}, {
-					title: 'Onboarding Survey Route',
+					title: '/survey',
 					to: '/development-site/routes/survey/'
 				}, {
-					title: 'Administration Route',
+					title: '/profile',
+					to: '/development-site/routes/profile/'
+				}, {
+					title: '/admin',
 					to: '/development-site/routes/admin/'
 				}, {
-					title: 'API Route',
-					to: '/development-site/routes/api/'
-				}
-			]
-		}, {
-			title: 'Component Architecture',
-			collapsible: true,
-			items: [
-				{
-					title: 'Top-Level Components',
-					to: '/development-site/introduction/'
+					title: '/auth',
+					to: '/development-site/routes/auth/'
 				}, {
-					title: 'Reusable Components',
-					to: '/development-site/mapping/property-map/'
+					title: '/api',
+					to: '/development-site/routes/api/'
 				}
 			]
 		}, {

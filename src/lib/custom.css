@@ -167,3 +167,10 @@
  .theme-default-sidebar.s-9Vf9XTllhwUZ.collapsed {
      padding-left: 2vw;
  }
+
+ .admonition-info code {
+     background-color: rgba(235, 72, 7, 0.3);
+     padding-top: 0px;
+     padding-bottom: 1px;
+     /* Add any additional styling for the <code> element here */
+ }
